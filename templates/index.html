@@ -1,0 +1,111 @@
+{% load static %}
+{% comment %} <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <h2>REGISTRATION PAGE</h2>
+    <form action="" method="POST" border="1" cellpadding="10px" cellspacing="5px">
+      {% csrf_token %}
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name</label>
+      <input type="text" class="form-control" name='name' id="enter your name" aria-describedby="emailHelp">
+    </div>
+  
+    <div class="mb-3">
+      <label for="UserName" class="form-label">USERNAME</label>
+      <input type="text" class="form-control" name='username' id="enter your username" aria-describedby="emailHelp">
+    </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control"  name='email' id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+  
+      <div class="mb-3">
+          <label for="Phone no" class="form-label">Phone no</label>
+          <input type="text" class="form-control"  name='phoneno' id="enter your Phone no" aria-describedby="phone no help">
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name='password' id="exampleInputPassword1">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html> {% endcomment %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REGISTRATION PAGE</title>
+  <style>
+    /* CSS styling for the registration form */
+    .registration-container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .registration-container input[type="text"],
+    .registration-container input[type="email"],
+    .registration-container input[type="password"],
+    .registration-container input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .registration-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-container" style="width: 459px;
+  margin: 0 auto;
+  padding: 71px;
+  border: 40px solid #fff;
+  border-radius: 52px;">
+    <h2>REGISTRATION PAGE</h2>
+    <form action="" method="POST" >
+       {% csrf_token %}
+      <label for="Name" class="form-label">Name</label>
+      <input type="text" class="form-control" name='name' id="enter your name" aria-describedby="emailHelp">
+
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" name='username' id="enter your username" aria-describedby="emailHelp">
+
+      <label for="email">Email:</label>
+      <input type="email" class="form-control"  name='email' id="exampleInputEmail1" aria-describedby="emailHelp">
+
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" name='password' id="exampleInputPassword1">
+
+      <label for="phone">Phone no:</label>
+      <input type="text" class="form-control"  name='phoneno' id="enter your Phone no" aria-describedby="phone no help">
+
+      <button type="submit" class="btn btn-primary">Submit</button >
+    </form>
+  </div>
+</body>
+</html>
